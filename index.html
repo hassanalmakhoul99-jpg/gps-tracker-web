@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPS Tracker Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="statusText" class="status-text">Not sharing location</div>
+
+        <button id="btnToggle" class="toggle-btn">START</button>
+
+        <div id="locationCard" class="card hidden">
+            <h3>📍 Current Location</h3>
+            <p id="latText">Latitude: --</p>
+            <p id="longText">Longitude: --</p>
+            <p id="timeText">Last update: --</p>
+        </div>
+
+        <div id="predictionCard" class="card hidden">
+            <h3>🔮 PREDICTION</h3>
+            <p id="directionText">Direction: Calculating...</p>
+            <p id="speedText">Speed: 0.0 m/s</p>
+            <hr>
+            <p class="subtitle">Predicted position in 10 sec:</p>
+            <p id="predLatText">Latitude: --</p>
+            <p id="predLongText">Longitude: --</p>
+            <p id="confidenceText" class="confidence">Confidence: 100%</p>
+        </div>
+    </div>
+
+    <!-- Firebase SDK Scripts (Modular v10) -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
